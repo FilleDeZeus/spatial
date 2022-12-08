@@ -1,118 +1,472 @@
-/* Header */
-
-#header
-    background-color: #fff
-    border-bottom: solid 1px rgba(144, 144, 144, 0.25)
-    box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.05)
-    color: #484848
-    cursor: default
-    font-size: 1.25em
-    height: 4.5em
-    left: 0
-    line-height: 4.4em
-    position: fixed
-    text-transform: uppercase
-    top: 0
-    width: 100%
-    z-index: 10000
-    z-index: 10001
-
-#header h1
-    color: #484848
-    font-weight: 400
-    height: inherit
-    left: 1.25em
-    line-height: inherit
+// -----------GLOBAL
+*
     margin: 0
-    padding: 0
-    position: absolute
-    top: 0
+    
 
-#header nav
-    height: inherit
-    line-height: inherit
-    position: absolute
-    right: 1.25em
-    top: 0
-    vertical-align: middle
+    h1
+        font-size: 25px
+        font-weight: 100
+        line-height: 40px
 
-#header nav ul
-    list-style: none
-    margin: 0
-    padding-left: 0
+    h2
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: 100
+        color: rgba(172,170,184,255)
+        line-height: 25px
+        margin-top:10px
 
-#header nav ul li
-    border-radius: 4px
-    display: inline-block
-    margin-left: 2.5em
-    padding-left: 0
+    a
+        text-decoration: none
+        font-size: 12px
+        margin: 0 15px
+        color: rgba(236,246,245,255)
 
-#header nav ul li a
-    -moz-transition: color 0.2s ease-in-out
-    -webkit-transition: color 0.2s ease-in-out
-    -ms-transition: color 0.2s ease-in-out
-    transition: color 0.2s ease-in-out
-    color: #666
-    display: inline-block
-    text-decoration: none
+    p
+        line-height: 20px
+        font-size: 13px
 
-#header nav ul li a:hover
-    color: #484848
+    button
+        margin-top:20px
+        border: none
+        padding: 15px 0
+        width:150px
+        background-color: rgba(243,40,83,255)
+        border-radius:2px
+        
+    // ----------HEADER
+    header
+        background: url(../images/banner.jpg)
+        background-size: cover
+        background-position: top
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        
+        .filtre
+            height: 72vh
+            width: 100%
+            background-color: #26322fbf
 
-#header nav ul li:first-child
-    margin-left: 0
+        .position
+            position: absolute
+            z-index: 1
+            width:100%
 
-#header nav ul li .button
-    border-color: rgba(144, 144, 144, 0.25)
-    box-shadow: none
-    height: 3em
-    line-height: 2.9em
-    margin-bottom: 0
-    padding: 0 1.5em
-    position: relative
-    top: -0.075em
-    vertical-align: middle
+            .container
+                display: flex
+                align-items: center
+                color: white
+                flex-wrap: wrap  
 
-#header .container
-    position: relative
+            .header1
+                justify-content: space-between
+                padding: 2%
 
-#header .container h1
-    left: 0
+                h2
+                    font-size: 13px
+                    font-weight: 100
+                    line-height: 20px
+                    color: rgba(236,246,245,255)
 
-#header .container nav
-    right: 0
+                nav
+                    text-align: right
+                
+                    a
+                        margin-left: 40px
 
-#header.alt
-    background-color: transparent
-    border: 0
-    box-shadow: none
-    height: 3.25em
-    line-height: 3.25em
-    position: absolute
+            .header2
+                top:0
+                height:65vh
+                width:100%
+                text-align: center
+                justify-content: center
+                align-items: center
+                position: absolute
+                z-index: -1
 
-#header.alt h1
-    color: #ffffff
-    left: 2.5em
-    top: 2em
+                div
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    width:40%
+    
+    // ---------SECTION
+    section
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding:4%
 
-#header.alt h1 a
-    color: #FFF
+     // ---------SECTION1
+    .section1 
+        .container
+            width: 40%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
 
-#header.alt nav
-    right: 2em
-    top: 2em
+            div
+                width: 50%
 
-#header.alt nav a
-    color: #ddd
+                p
+                    font-size: 13px
+                    line-height:25px
 
-#header.alt nav a:active, #header.alt nav a:hover
-    color: #FFF
+     // ---------SECTION2
+    .section2
+        background-color: rgba(246,246,246,255)
+        text-align: center
 
-#header.alt .button
-    border-color: rgba(255, 255, 255, 0.5)
-    color: #ffffff !important
+        .container
+            width:70%
 
-@media screen and (max-width: 980px)
+            .cards
+                margin-top:7%
+                display: flex
+                justify-content: space-between
+                height: 50vh
+                width: 100%
 
-    #header
-        display: none
+                .div_image
+                    border: solid rgba(234,234,234,255) 1px
+                    width: 48%
+                    background-color: white
+
+                    .image
+                        height: 80%
+                        background-size: cover
+                        background-position: bottom
+                        background-repeat: no-repeat
+
+                    .image1
+                        background-image: url(../images/pic02.jpg)
+
+                    .image2
+                        background-image: url(../images/pic03.jpg)
+
+                    div:last-child
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        height: 20%
+                        text-transform: uppercase
+
+            
+            .bouton
+                margin-top: 50px
+    
+                button
+                    margin: 0 8px
+
+                button:last-of-type
+                    background-color: .272727
+    
+     // ---------SECTION3
+    
+    .section3
+        .centre
+            width: 70%
+
+            .container
+                margin-top: 5%
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+
+                .bloc
+                    width: 45%
+                    display: flex
+                    text-align: right
+                    margin: 2%
+
+                    .texte
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        padding-right: 25px
+
+                        h3
+                            font-size: 14px
+                        
+                        h4
+                            margin-top: 10px
+                            font-size: 12px
+                            color: rgba(172,170,184,255)
+
+                        p
+                            padding-top: 20px
+
+
+                    .div_image
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        
+                        .image
+                            height:8vw
+                            width:8vw
+                            border-radius: 50%
+                            border: solid rgba(227,227,227,255) 6px
+                            background-size: cover
+                            background-repeat: no-repeat
+
+                        .image1
+                            background-image: url(../images/pic04.jpg)
+
+                        .image2
+                            background-image: url(../images/pic05.jpg)
+
+                        .image3
+                            background-image: url(../images/pic06.jpg)
+                        
+                        .image4
+                            background-image: url(../images/pic07.jpg)
+
+                .bloc2
+                    flex-direction: row-reverse
+                    text-align: left
+                    
+                    .texte
+                        padding-right: 0px
+                        padding-left: 25px
+
+     // ---------SECTION4
+    .section4
+        padding:0
+        background: url(../images/banner.jpg)
+        background-size: cover
+        background-position: bottom
+        position: relative
+        
+        .filtre
+            height: 50vh
+            width: 100%
+            background-color: #26322fbf
+
+        .position
+            position: absolute
+            z-index: 1
+            width: 99%
+
+            .bloc_header2
+                display: flex
+                align-items: center
+                justify-content: center
+                color: white
+                text-align: center
+
+                div
+                    display: flex
+                    align-items: center
+                    flex-direction: column
+                    width:40%
+                        
+     // ---------FOOTER-
+    footer
+        padding:10vh 0
+        text-align: center
+        background-color: rgba(246,246,246,255)
+        color: rgba(170,170,170,255)
+
+        a
+            color: rgba(170,170,170,255)
+            font-size:30px
+
+        p
+            margin-top: 30px
+
+            span
+                font-size: 11px
+                padding: 0 15px
+            
+            span:not(:last-of-type)
+                border-right: solid 0.5px
+    
+
+
+
+// -----------MEDIA 1300px
+
+@media (max-width: 1300px )
+
+    header
+        .position
+            .header2
+                div
+                    width:50%
+
+    .section1 
+        .container
+            width: 60%
+
+            div
+                width: 45%
+
+                p
+                    font-size: 13px
+                    line-height:25px
+
+    
+    .section3
+        h1, h2
+            text-align: center
+        
+        .centre
+            .container
+                .bloc
+                    flex-direction: column-reverse
+                    text-align: center
+                    justify-content: center
+
+                    .texte
+                        padding-right:0px
+
+
+                .image
+                    margin-bottom: 8%
+
+                .bloc2
+                    flex-direction: column-reverse
+
+                    .texte
+                        padding-left:0px
+
+
+
+// -----------MEDIA 850px
+
+@media (max-width: 850px)
+
+    h1
+        font-size: 20px
+        line-height: 30px
+
+    h2
+        font-size: 12px
+        line-height: 20px
+        
+
+    header
+        .filtre
+            height: 50vh
+
+        .position
+            .header1
+                flex-direction: column
+                justify-content: center
+
+                nav
+                    margin-top:15px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    a
+                        margin: -10px 15px
+            
+
+            .header2
+                div
+                    width:60vh
+                    padding:15px
+
+
+    .section1
+        .container
+            width: 80%
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            text-align: center
+
+            div
+                width: 80%
+
+                p
+                    margin-top:20px
+
+
+    .section2
+        background-color: rgba(246,246,246,255)
+        text-align: center
+
+        .container
+            width:70%
+
+            .cards
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                height: auto
+
+                .div_image
+                    width: 80%
+                    height: 40vh
+                    margin-top: 20px
+
+                    div:last-child
+                        p
+                            font-size: 11px
+                            font-family: 'giane_gothic_sans_boldbold'
+        
+            .bouton
+                margin-top: 30px
+    
+                button
+                    margin: 8px
+
+    
+    .section3
+        .centre
+            .container
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+                .bloc
+                    margin-top:30px
+                    width: 100%
+                    flex-direction: column-reverse
+                    text-align: center
+
+                    .texte
+                        padding-right: 0px
+
+
+                    .container_image
+                        .image
+                            height:15vw
+                            width:15vw
+
+                .bloc2
+                    flex-direction: column-reverse
+                    text-align: center
+                    
+                    .texte
+                        padding-left: 0px
+
+
+    .sction4
+        .position
+            .bloc_header2
+                div
+                    width:80%
+                        
+
+    footer
+        padding:5vh 0
+        
+        a
+            font-size:20px
+
+        p
+            display: flex
+            flex-direction: column
+
+            span
+                font-size: 10px
+
